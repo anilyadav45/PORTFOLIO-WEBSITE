@@ -1,0 +1,198 @@
+/* Media queries for responsiveness */
+
+@media screen and (max-width: 1100px) {}
+
+@media screen and (max-width: 1000px) {}
+
+@media screen and (max-width: 900px) {
+    .about-section .about-wrapper {
+        grid-template-columns: 1fr 1fr;
+    }
+    .about-section .my-image {
+        grid-column: 1/-1;
+        grid-row: 1
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .service .s-contain {
+        grid-template-columns: 1fr 1fr
+    }
+}
+
+@media screen and (max-width: 800px) {
+    header .bars {
+        display: block;
+        position: relative;
+        z-index: 11
+    }
+    header nav .topnav {
+        top: 95%;
+        position: absolute;
+        width: 250px;
+        height: auto;
+        overflow-x: hidden;
+        background: #fff;
+        transition: 0.4s ease;
+        -webkit-transition: 0.4s ease;
+        visibility: hidden;
+        opacity: 0;
+        right: 0;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 1px 20px 10px rgba(0, 0, 0, 0.4);
+        z-index: 99;
+    }
+    .toggle header nav .topnav {
+        visibility: visible;
+        opacity: 1;
+        top: 100%
+    }
+    .bars:hover~.topnav {
+        visibility: visible;
+        opacity: 1;
+        top: 100%;
+    }
+    .bars:hover~.overlay {
+        display: blocks
+    }
+    .bars:hover span:nth-child(1) {
+        -webkit-transform: rotate(-45deg) translate(-8px, 10px);
+        transform: rotate(-45deg) translate(-8px, 10px);
+    }
+    .bars:hover span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -8px);
+        transform: rotate(45deg) translate(-5px, -8px);
+    }
+    .bars:hover span:nth-child(2) {
+        opacity: 0
+    }
+    header nav .topnav a {
+        display: block;
+        text-align: left;
+        width: auto;
+        height: auto;
+        line-height: normal;
+        padding: 14px 20px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        color: #222;
+    }
+    header nav .topnav a:first-child {
+        border-top: 1px solid rgba(0, 0, 0, 0.2)
+    }
+    header nav .topnav>a:before {
+        display: none;
+    }
+    /*.topnav a:first-child{
+		margin-top: 50px;
+	}*/
+    .section .sc-footer {
+        flex-direction: column;
+        text-align: center
+    }
+    .main .section .msg-note {
+        margin: 0 auto;
+        letter-spacing: 0px
+    }
+    .section .sc-links {
+        margin: 30px 0 0
+    }
+    .main .section h1 {
+        font-size: 40px
+    }
+    .main .section #item {
+        font-size: 88px
+    }
+    .blog .blog-wrapper {
+        grid-template-columns: 1fr 1fr
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .last-wrap .flex-contact,
+    .stats-item {
+        grid-template-columns: 1fr
+    }
+    .mystats {
+        padding: 80px 0 0 0
+    }
+    .p-wrap {
+        padding: 0;
+    }
+    .stats-item {
+        border-radius: 0;
+    }
+    .last-wrap .flex-contact .input-field {
+        flex-direction: column;
+    }
+    .last-wrap .flex-contact .input-field input {
+        margin: 0
+    }
+    .last-wrap .flex-contact .input-field input:first-child {
+        margin: 0 0 14px
+    }
+    .last-wrap .flex-contact .sms-form textarea {
+        width: 100%
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .about-section .about-wrapper,
+    .service .s-contain {
+        grid-template-columns: 1fr
+    }
+    .about-section {
+        padding-bottom: 40px
+    }
+    .about-section .about-flex {
+        padding: 14px 0;
+    }
+    header .logo h1 {
+        font-size: 40px
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .main {
+        height: 400px;
+    }
+    .main .section h1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .myRoll {
+        padding: 2px 0;
+    }
+    .main .section h1 {
+        font-size: 30px;
+        line-height: 1.8rem
+    }
+    .main .section #item {
+        font-size: 30px
+    }
+    .main .section #blink {
+        font-size: 22px
+    }
+    .main .section .sc-links {
+        display: block;
+        width: 100%;
+    }
+    .main .section .sc-links a {
+        display: block;
+        margin: 0 0 8px;
+        width: 100%
+    }
+    .last-wrap .flex-contact .btn {
+        align-items: center;
+        flex-direction: column;
+    }
+    .blog .blog-wrapper {
+        grid-template-columns: 2fr
+    }
+}
+
+@media screen and (max-width: 400px) {}
+
+@media screen and (max-width: 300px) {}
